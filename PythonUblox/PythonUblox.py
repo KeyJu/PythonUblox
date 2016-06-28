@@ -97,7 +97,7 @@ for fn in filename:
             buffer.append(reserved1)
             p1 = p+16
             p = p+16
-            for j in range(int(buffer[3])-1):                
+            for j in range(int(buffer[3])):                
                 buffer.append("%0.3f" % unpack('!d',data[p1:p1+8][::-1])) 
                 p1 = p+8
                 buffer.append("%0.3f" % unpack('!d',data[p1:p1+8][::-1]))
